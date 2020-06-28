@@ -38,11 +38,6 @@ export default class Plabook extends React.Component{
             const src = context.createMediaStreamSource(stream)
             src.connect(this.analizer)
             this._loop()
-            // this.context = new AudioContext()
-            // this.analizer = this.context.createAnalyser()
-            // this.src = this.context.createMediaStreamSource(stream)
-            // this.src.connect(this.analizer)
-            // this._loop()
         })
     }
 
@@ -77,8 +72,7 @@ export default class Plabook extends React.Component{
 
     componentDidMount(){
         this._getPermition()
-        axios.get('https://26b8c7bb05fd.ngrok.io/texts').then(r => {
-            console.log(r)
+        axios.get('http://95.163.215.127:3000/texts').then(r => {
             for(let i = 0; i< r.data.length; i++){
                 this.state.images.push(r.data[i].image)
                 this.state.names.push(r.data[i].name)
@@ -185,14 +179,13 @@ export default class Plabook extends React.Component{
             type: 'audio/wav'
         })
         const finalString = await this._getBinaryString(voiceBlob)
-        console.log(finalString)
-        axios.post('https://26b8c7bb05fd.ngrok.io/saveRecord',{
+        console.log(this.state.currentName)
+        axios.post('http://95.163.215.127:3000/saveRecord',{
             textName : this.state.currentName,
             record: finalString
         }).then(r => {
             const id = r.data.result._id
-            console.log(this.state.currentName)
-            axios.post('https://26b8c7bb05fd.ngrok.io/checkRecord',{
+            axios.post('http://95.163.215.127:3000/checkRecord',{
                 textName : this.state.currentName,
                 recordId: id
             }).then(r => {
@@ -278,6 +271,22 @@ export default class Plabook extends React.Component{
         }
     }
 
+    _checkLeftArrow = (tmp) =>{
+        if(tmp === this.state.names[0]){
+            return{
+                visibility: "hidden"
+            }
+        }
+    }
+
+    _checkRightArrow = (tmp) =>{
+        if(tmp === (this.state.names[this.state.names.length - 1])){
+            return{
+                visibility: "hidden"
+            }
+        }
+    }
+
     render(){
         return(
             <div className = "wrapper" style={this._setBackground(this.state.currentImage)}>
@@ -303,9 +312,9 @@ export default class Plabook extends React.Component{
                             </div>
                         </div>
                         <div className="arrowsBlock">
-                            <a className="controlBtn" href="#" onClick = {this._clickArrowLeft}><FontAwesomeIcon icon={faArrowLeft} /></a>
+                            <a className="controlBtn" href="#" onClick = {this._clickArrowLeft} style = {this._checkLeftArrow(this.state.currentName)}><FontAwesomeIcon icon={faArrowLeft} /></a>
                             <a className="controlBtn" href="#" onClick = {this._clickRecordButton} style= { this._setCheckVoice(this.state.checkVoice) }><FontAwesomeIcon icon={this.state.microIcon} /></a>
-                            <a className="controlBtn" href="#" onClick = {this._clickArrowRight}><FontAwesomeIcon icon={faArrowRight} /></a>
+                            <a className="controlBtn" href="#" onClick = {this._clickArrowRight} style = {this._checkRightArrow(this.state.currentName)}><FontAwesomeIcon icon={faArrowRight} /></a>
                         </div>
                     </div>
                 </div>
