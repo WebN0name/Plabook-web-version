@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Plabook-web-version/static/css/main.6f644f59.chunk.css",
-    "main.js": "/Plabook-web-version/static/js/main.e687493d.chunk.js",
-    "main.js.map": "/Plabook-web-version/static/js/main.e687493d.chunk.js.map",
+    "main.js": "/Plabook-web-version/static/js/main.bfad1b67.chunk.js",
+    "main.js.map": "/Plabook-web-version/static/js/main.bfad1b67.chunk.js.map",
     "runtime-main.js": "/Plabook-web-version/static/js/runtime-main.05b1261c.js",
     "runtime-main.js.map": "/Plabook-web-version/static/js/runtime-main.05b1261c.js.map",
     "static/js/2.f8766fbc.chunk.js": "/Plabook-web-version/static/js/2.f8766fbc.chunk.js",
     "static/js/2.f8766fbc.chunk.js.map": "/Plabook-web-version/static/js/2.f8766fbc.chunk.js.map",
     "index.html": "/Plabook-web-version/index.html",
-    "precache-manifest.cab49b3f5a74c8c462ded94dd12c9a30.js": "/Plabook-web-version/precache-manifest.cab49b3f5a74c8c462ded94dd12c9a30.js",
+    "precache-manifest.0b948fb4041eacfbe57b67356ef7bc8d.js": "/Plabook-web-version/precache-manifest.0b948fb4041eacfbe57b67356ef7bc8d.js",
     "service-worker.js": "/Plabook-web-version/service-worker.js",
     "static/css/main.6f644f59.chunk.css.map": "/Plabook-web-version/static/css/main.6f644f59.chunk.css.map",
     "static/js/2.f8766fbc.chunk.js.LICENSE.txt": "/Plabook-web-version/static/js/2.f8766fbc.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.05b1261c.js",
     "static/js/2.f8766fbc.chunk.js",
     "static/css/main.6f644f59.chunk.css",
-    "static/js/main.e687493d.chunk.js"
+    "static/js/main.bfad1b67.chunk.js"
   ]
 }

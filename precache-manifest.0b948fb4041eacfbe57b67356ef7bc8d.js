@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "342ca4e45f4460a5c353ce8c66007ec0",
+    "revision": "56ce898282f0c2b2fc219cc6f6850c9f",
     "url": "/Plabook-web-version/index.html"
   },
   {
-    "revision": "3085c3a2b8c933ce1501",
+    "revision": "a1217d0d063eda8e6b67",
     "url": "/Plabook-web-version/static/css/main.6f644f59.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Plabook-web-version/static/js/2.f8766fbc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3085c3a2b8c933ce1501",
-    "url": "/Plabook-web-version/static/js/main.e687493d.chunk.js"
+    "revision": "a1217d0d063eda8e6b67",
+    "url": "/Plabook-web-version/static/js/main.bfad1b67.chunk.js"
   },
   {
     "revision": "1d5ad040fcd86ee7a16c",
