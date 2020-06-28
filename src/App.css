@@ -1,38 +1,122 @@
 .App {
+  display: flex;
+  align-items:'center';
+  justify-content: 'center';
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftSide{
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 10%, 
+  rgba(255, 255, 255, 0.7) 20%,
+  rgba(255, 255, 255, 0.6) 30%,
+  rgba(255, 255, 255, 0.4) 90%,
+  rgba(255, 255, 255, 0.3) 93%,
+  rgba(255, 255, 255, 0.2) 96%,
+  transparent 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.textBlock{
+  width: 75%;
+  font-size: 36px;
+}
+
+.rightSide{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rightSide img{
+  width: 160px;
+  height: 150px;
+  margin-top: 60px;
+  margin-right: 160px;
+}
+
+.sidesWrapper{
+  display: flex;
+}
+
+.controlBlock{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  z-index: 100;
+  bottom: 130px;
+}
+
+.progressBar{
+  width: 30%;
+  height: 30px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+.progressInner{
+  height: 30px;
+  background-color: green;
+  border-radius: 7px;
+}
+
+.percents{
+  position: relative;
   text-align: center;
+  bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.percents p{
+  margin: 0;
+  line-height: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.controlBlock{
+  width: 100%;
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pageControll{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.arrowsBlock{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controlBtn{
+  display: block;
+  font-size: 36px;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  color: black;
 }
+
+.arrowsBlock .controlBtn+.controlBtn{
+  margin-left: 50px;
+}
+
