@@ -77,7 +77,7 @@ export default class Plabook extends React.Component{
 
     componentDidMount(){
         this._getPermition()
-        axios.get('http://95.163.215.127:3000/texts').then(r => {
+        axios.get('https://95.163.215.127:3000/texts').then(r => {
             console.log(r)
             for(let i = 0; i< r.data.length; i++){
                 this.state.images.push(r.data[i].image)
@@ -186,13 +186,13 @@ export default class Plabook extends React.Component{
         })
         const finalString = await this._getBinaryString(voiceBlob)
         console.log(finalString)
-        axios.post('http://95.163.215.127:3000/saveRecord',{
+        axios.post('https://95.163.215.127:3000/saveRecord',{
             textName : this.state.currentName,
             record: finalString
         }).then(r => {
             const id = r.data.result._id
             console.log(this.state.currentName)
-            axios.post('http://95.163.215.127:3000/checkRecord',{
+            axios.post('https://95.163.215.127:3000/checkRecord',{
                 textName : this.state.currentName,
                 recordId: id
             }).then(r => {
